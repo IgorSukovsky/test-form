@@ -1,0 +1,129 @@
+:root {
+  --white-color: #fff;
+  --dark-text-color: #212121;
+  --accent-color: #2196f3;
+  --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #ca804f, #a4caa1, #121246);
+  color: var(--dark-text-color);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 480px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ca804f, #a4caa1, #121246);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.field {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.input {
+  border: 1px solid #212121;
+  background: linear-gradient(90deg, #ca804f, #a4caa1, #121246);
+  width: 100%;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.label {
+  /* background: linear-gradient(90deg, #ca804f, #a4caa1, #121246); */
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 29%;
+  left: 81px;
+  transform: translateX(-50%);
+  transition: transform 250ms var(--timing-fn);
+}
+
+.field:focus-within .label {
+  transform: translateY(-40px);
+}
+
+.input:not(:placeholder-shown) + .label {
+  transform: translateY(-40px);
+}
+
+.operation-label {
+  margin-right: 10px;
+}
+
+.selected-operation {
+  border-radius: 4px;
+}
+
+button {
+  margin: auto;
+  background: linear-gradient(to right, #a188fc 0%, #2eeade 50%, #a188fc 100%);
+  background-size: 200%;
+  background-position: 100%;
+  color: #ccffff;
+  padding: 1em 3em;
+  border-radius: 2em;
+  display: inline-block;
+  box-shadow: 0 0 20px #229999;
+  text-shadow: 0 0 5px #000;
+  transition: all 0.7s;
+  border: solid 1px #777f8b;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #a188fc 0%, #2eeade 50%, #a188fc 100%);
+  background-size: 200%;
+  background-position: 0px;
+  box-shadow: 0 0 40px #55ffff;
+  color: #ccffff;
+  text-shadow: 0 0 30px #000000;
+  border: solid 1px #ccffff;
+}
+
+.field-result {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  margin: 0 auto;
+  font-size: 30px;
+}
